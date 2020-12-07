@@ -3,23 +3,6 @@
         {
             "type": "aws-sam",
             "request": "direct-invoke",
-            "name": "API node-lambda-sample:HelloWorldFunction",
-            "invokeTarget": {
-                "target": "api",
-                "templatePath": "template.yaml",
-                "logicalId": "HelloWorldFunction"
-            },
-            "api": {
-                "path": "/hello",
-                "httpMethod": "get",
-                "payload": {
-                    "json": {}
-                }
-            }
-        },
-        {
-            "type": "aws-sam",
-            "request": "direct-invoke",
             "name": "node-lambda-sample:HelloWorldFunction",
             "invokeTarget": {
                 "target": "template",
@@ -28,8 +11,10 @@
             },
             "lambda": {
                 "payload": {},
-                "environmentVariables": {}
-            }
+                "environmentVariables": {
+                    "Environment": "production"
+                }
+            },
         }
     ]
 }

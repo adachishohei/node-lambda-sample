@@ -26,7 +26,7 @@ Mappings:
    staging:
      SAMPLE: 'staging@example.com'
    production:
-     SAMPLE: 'production@example.com'
+     SAMPLE: '/lambda/sample'
 
 Resources:
   HelloWorldFunction:
